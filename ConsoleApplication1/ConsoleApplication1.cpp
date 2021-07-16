@@ -34,6 +34,10 @@ protected:
 	}
 	
 public:
+	virtual void Transmission() // метод, выводящий информацию о коробке передач
+	{
+		cout<<"Механическая коробка передач!"<<endl;
+	}
 	void StartEngine() //  метод завести мотор
 	{
 		if (TryTo()) //Вызываем метод попытки завестись  
@@ -73,6 +77,11 @@ private:
 	string type;
 
 public:
+	void Transmission() override //Переоприделенный метод коробки передач для спорткаров
+	{
+		cout<<"Коробка-автомат!"<<endl;
+	}
+	
 	void SetModel(string model) // ввести модель
 	{
 		this->model = model;
